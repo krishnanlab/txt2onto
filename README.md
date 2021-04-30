@@ -6,7 +6,7 @@ There are currently >1.3 million human –omics samples that are publicly availa
 
 Previous studies have shown that the molecular profiles associated with –omics samples are highly predictive of a variety of sample attributes. Using transcriptome data, we have shown that NLP-ML models can be nearly as accurate as expression-based models in predicting sample tissue annotations. However, the latter (models based on –omics profiles) need to be trained anew for each –omics experiment type. On the other hand, once trained using any text-based gold-standard, approaches such as NLP-ML can be used to classify sample descriptions irrespective of sample type. We demonstrated this versatility by using NLP-ML models trained on microarray sample descriptions to classify RNA-seq, ChIP-seq, and methylation samples without retraining.
 
-Here, we provide the fully trained models and a simple utility script for users to leverage the predictive power of NLP-ML to annotate their text corpora of interest for 346 tissues and cell types from [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon).  These NLP-ML models are trained using our full gold standard. As a note: in our manuscript, we discussed the results of models who had sufficient training data in the gold standard for at least 3-fold CV. The remaining models were not discussed or examined in detail in our work due to lack of sufficient labeled samples. We have included trained models for all available tissues and cell types so as to provide users with the maximum amount of predictive capability. However, it should be noted that some models included in this repository have very little training data (i.e., small number of positively labeled examples) and thus may provide inaccurate annotations. The full list of cross-validated models can be found [here](https://github.com/krishnanlab/NLP-ML_Annotation/blob/main/gold_standard/CrossValidatedModels.txt), and the full list of models presented in our paper can be found [here](https://github.com/krishnanlab/NLP-ML_Annotation/blob/main/gold_standard/ManuscriptModels.txt).
+Here, we provide the fully trained models and a simple utility script for users to leverage the predictive power of NLP-ML to annotate their text corpora of interest for 346 tissues and cell types from [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon).  These NLP-ML models are trained using our full gold standard. As a note: in our manuscript, we discussed the results of models who had sufficient training data in the gold standard for at least 3-fold CV. The remaining models were not discussed or examined in detail in our work due to lack of sufficient labeled samples. We have included trained models for all available tissues and cell types so as to provide users with the maximum amount of predictive capability. However, it should be noted that some models included in this repository have very little training data (i.e., small number of positively labeled examples) and thus may provide inaccurate annotations. The full list of cross-validated models can be found [here](https://github.com/krishnanlab/txt2onto/blob/main/gold_standard/CrossValidatedModels.txt), and the full list of models presented in our paper can be found [here](https://github.com/krishnanlab/txt2onto/blob/main/gold_standard/ManuscriptModels.txt).
 
 <!--
 ### Link to Paper
@@ -32,7 +32,7 @@ We recommend using the stated versions of the libraries in `requirements.txt` to
 
 ### Input
 
-The input should be a plain text file with one description per line. An example is provided [here](https://github.com/krishnanlab/NLP-ML_Annotation/blob/main/data/example_input.txt) with a small excerpt below.
+The input should be a plain text file with one description per line. An example is provided [here](https://github.com/krishnanlab/txt2onto/blob/main/data/example_input.txt) with a small excerpt below.
 
 ```
 na colon homo sapiens colonoscopy male adenocarcinoma extract total rna le biotin norm specified colonoscopy male adenocarcinoma specified ...
@@ -109,7 +109,7 @@ For support please contact [Nat Hawkins](hawki235@msu.edu).
 All general inquiries should be directed to [Dr. Arjun Krishnan](arjun@msu.edu).
 
 ### License
-This repository and all its contents are released under the [Creative Commons License: Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode); See [LICENSE.md](https://github.com/krishnanlab/NLP-ML_Annotation/blob/main/LICENSE).
+This repository and all its contents are released under the [Creative Commons License: Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode); See [LICENSE.md](https://github.com/krishnanlab/txt2onto/blob/main/LICENSE).
 
 
 ### Funding
