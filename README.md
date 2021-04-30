@@ -36,20 +36,27 @@ DESCRIBE
 ## Additional Information
 
 ### Support
-For support please contact [Nat Hawkins](https://twitter.com/nat_hawkins_) at hawki235@msu.edu.
+For support please contact [Nat Hawkins](hawki235@msu.edu).
+
+### Inquiry
+All general inquiries should be directed to [Dr. Arjun Krishnan](arjun@msu.edu).
 
 ### License
-This repository and all its contents are released under the [Creative Commons License: Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode); See [LICENSE.md](https://github.com/krishnanlab/pecanpy/blob/master/LICENSE.md).
+This repository and all its contents are released under the [Creative Commons License: Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode); See [LICENSE.md](https://github.com/krishnanlab/NLP-ML_Annotation/blob/main/LICENSE).
 
-### Citation
-ADD THIS LATER
 
 ### Funding
-FIX
+
+This work was primarily supported by US National Institutes of Health (NIH) grants R35 GM128765 to AK and in part by MSU start-up funds to AK and MSU Rasmussen Doctoral Recruitment Award and Engineering Distinguished Fellowship to NTH.
 
 ### Acknowledgements
-PULL FROM PAPER
 
-### References
+The authors would like to thank [Kayla Johnson](https://sites.google.com/view/kaylajohnson/home) and [Anna Yannakopoulos](https://yannakopoulos.github.io/) for their feedback and contributions to this manuscript as well as their support on this research.
 
-DO WE NEED THESE?
+%### Citation
+
+%ADD THIS LATER
+
+%### References
+
+%DO WE NEED THESE?
