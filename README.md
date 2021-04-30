@@ -91,7 +91,7 @@ Here, we list the files we have included as part of this repository.
     * `gold_standard/GoldStandard_Propagated.txt` - Our manually annotated gold standard with a list of annotations for each sample not in matrix form
     * `gold_standard/GoldStandard_Sample-Descriptions.txt` - Sample descriptions for the samples in our gold standard
     * `gold_standard/GoldStandard_Sample-IDS.txt` - Sample and experiment labels corresponding to `gold_standard/GoldStandard_Sample-Descriptions.txt`
-    * `gold_standard/GoldStandard_Unpropagated.txt` - The original gold standard manual annotations[^fn1]
+    * `gold_standard/GoldStandard_Unpropagated.txt` - The original gold standard manual annotations [1]
     * `gold_standard/ManuscriptModels.txt` - A list of the models we evaluated and showed results for in our manuscript, a subset of `gold_standard/CrossValidatedModels.txt`
     * `gold_standard/ModelsPerAnatomicalSystem.json` - Mapping that lists the tissues and cell types that belong to each high-level anatomical system
 * `src/` - Main source directory
@@ -126,4 +126,4 @@ The authors would like to thank [Kayla Johnson](https://sites.google.com/view/ka
 -->
 ### References
 
-[^fn1] : **Ontology-aware classification of tissue and cell-type signals in gene expression profiles across platforms and technologies**. Lee Y, Krishnan A, Zhu Q, Troyanskaya OG. Bioinformatics (2013) 29:3036-3044.
+[1] : **Ontology-aware classification of tissue and cell-type signals in gene expression profiles across platforms and technologies**. Lee Y, Krishnan A, Zhu Q, Troyanskaya OG. Bioinformatics (2013) 29:3036-3044.
