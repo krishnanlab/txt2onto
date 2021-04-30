@@ -23,6 +23,14 @@ from nltk.stem import WordNetLemmatizer
 from flair.data import Sentence
 from flair.embeddings import StackedEmbeddings, BertEmbeddings, ELMoEmbeddings
 
+import nltk, torch, flair
+
+nltk.download('stopwords')
+nltk.download('wordnet')
+flair.device =  torch.device("cpu")
+
+
+
 
 def loadDictionary(fname, compression = True, try_except = True, key_dtype = str,
                    value_dtype = float, delimiter = "\t", verbose = False):
