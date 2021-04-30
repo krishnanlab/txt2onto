@@ -1,0 +1,153 @@
+UBERON:0002346	neurectoderm
+UBERON:0000485	simple columnar epithelium
+UBERON:0002365	exocrine gland
+UBERON:0000029	lymph node
+UBERON:0012069	epithelium-associated lymphoid tissue
+UBERON:0000323	late embryo
+UBERON:0000160	intestine
+CL:0000738	leukocyte
+UBERON:0000179	haemolymphatic fluid
+UBERON:0001042	chordate pharynx
+UBERON:0019264	gray matter of forebrain
+UBERON:0002384	connective tissue
+UBERON:0001638	vein
+UBERON:0002048	lung
+UBERON:0000923	germ layer
+UBERON:0012274	columnar epithelium
+UBERON:0002372	tonsil
+UBERON:0000451	prefrontal cortex
+UBERON:0016526	lobe of cerebral hemisphere
+CL:2000064	ovarian surface epithelial cell
+UBERON:0002020	gray matter
+UBERON:0002728	entorhinal cortex
+UBERON:0000945	stomach
+UBERON:0001870	frontal cortex
+CL:0000542	lymphocyte
+UBERON:0002107	liver
+UBERON:0001264	pancreas
+CL:0000766	myeloid leukocyte
+UBERON:0002368	endocrine gland
+UBERON:0007592	ciliated columnar epithelium
+UBERON:0004815	lower respiratory tract epithelium
+CL:0000084	T cell
+CL:0002087	nongranular leukocyte
+UBERON:0000956	cerebral cortex
+UBERON:0004804	oviduct epithelium
+CL:0002321	embryonic cell
+UBERON:0005906	serous sac
+CL:0000057	fibroblast
+UBERON:0006955	uterine epithelium
+UBERON:0000992	ovary
+UBERON:0000955	brain
+CL:0002553	fibroblast of lung
+UBERON:0011300	gray matter of telencephalon
+UBERON:0004765	skeletal element
+CL:0000842	mononuclear cell
+UBERON:0000178	blood
+UBERON:0000055	vessel
+CL:0000451	dendritic cell
+UBERON:0001049	neural tube
+UBERON:0005291	embryonic tissue
+UBERON:0000948	heart
+UBERON:0016525	frontal lobe
+UBERON:0018254	skeletal musculature
+UBERON:0004537	blood vasculature
+UBERON:0001155	colon
+UBERON:0001134	skeletal muscle tissue
+UBERON:0000490	unilaminar epithelium
+UBERON:0001474	bone element
+UBERON:0004802	respiratory tract epithelium
+UBERON:0011821	irregular connective tissue
+CL:0000786	plasma cell
+CL:0000945	lymphocyte of B lineage
+UBERON:0003914	epithelial tube
+CL:0000037	hematopoietic stem cell
+UBERON:0001013	adipose tissue
+CL:0000763	myeloid cell
+UBERON:0000459	uterine wall
+CL:0002620	skin fibroblast
+CL:0002632	epithelial cell of lower respiratory tract
+UBERON:0010499	pseudostratified ciliated columnar epithelium
+UBERON:0000922	embryo
+UBERON:0002031	epithelium of bronchus
+UBERON:0000002	uterine cervix
+CL:0000946	antibody secreting cell
+UBERON:0001744	lymphoid tissue
+UBERON:0010316	germ layer / neural crest
+UBERON:0034769	lymphomyeloid tissue
+CL:0002202	epithelial cell of tracheobronchial tree
+UBERON:0007196	tracheobronchial tree
+CL:0000081	blood cell
+UBERON:0010498	pseudostratified columnar epithelium
+CL:0002368	respiratory epithelial cell
+UBERON:0001015	musculature
+UBERON:0002066	umbilical vein
+UBERON:0000310	breast
+UBERON:0001043	esophagus
+UBERON:0003528	brain gray matter
+UBERON:0001950	neocortex
+UBERON:0000991	gonad
+UBERON:0000993	oviduct
+UBERON:0004807	respiratory system epithelium
+UBERON:0000995	uterus
+UBERON:0002894	olfactory cortex
+UBERON:0001871	temporal lobe
+UBERON:0002371	bone marrow
+UBERON:0002185	bronchus
+UBERON:0012275	meso-epithelium
+UBERON:0000059	large intestine
+CL:0002322	embryonic stem cell
+UBERON:0000483	epithelium
+UBERON:0005401	cerebral hemisphere gray matter
+UBERON:0006562	pharynx
+UBERON:0002199	integument
+UBERON:0001962	gut-associated lymphoid tissue
+UBERON:0011215	central nervous system cell part cluster
+UBERON:0016548	central nervous system gray matter layer
+UBERON:0009778	pleural sac
+UBERON:0011823	dense connective tissue
+CL:0000576	monocyte
+CL:0000182	hepatocyte
+UBERON:0002049	vasculature
+UBERON:0012168	umbilical cord blood
+UBERON:0000117	respiratory tube
+UBERON:0000065	respiratory tract
+UBERON:0000203	pallium
+UBERON:0016529	cortex of cerebral lobe
+UBERON:0001893	telencephalon
+UBERON:0002530	gland
+UBERON:0001869	cerebral hemisphere
+CL:0000066	epithelial cell
+UBERON:0004801	cervix epithelium
+UBERON:0005911	endo-epithelium
+CL:0002328	bronchial epithelial cell
+UBERON:0007601	ciliated epithelium
+UBERON:0000473	testis
+UBERON:0001295	endometrium
+UBERON:0008895	splanchnocranium
+UBERON:0001981	blood vessel
+UBERON:0002385	muscle tissue
+UBERON:0002973	parahippocampal gyrus
+UBERON:0002097	skin of body
+UBERON:0001558	lower respiratory tract
+UBERON:0003920	venous blood vessel
+UBERON:0001961	mucosa-associated lymphoid tissue
+UBERON:0000200	gyrus
+UBERON:0002367	prostate gland
+UBERON:0002036	striated muscle tissue
+UBERON:0002113	kidney
+UBERON:0004725	piriform cortex
+UBERON:0005366	olfactory lobe
+UBERON:0001735	tonsillar ring
+UBERON:0008367	breast epithelium
+CL:0008001	hematopoietic precursor cell
+UBERON:0002600	limbic lobe
+UBERON:0001890	forebrain
+UBERON:0019042	reproductive system mucosa
+UBERON:0010260	umbilical blood vessel
+UBERON:0003889	fallopian tube
+UBERON:0010371	ecto-epithelium
+UBERON:0011822	dense irregular connective tissue
+CL:0000235	macrophage
+UBERON:0003975	internal female genitalia
+CL:0002535	epithelial cell of cervix
