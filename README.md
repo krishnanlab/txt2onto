@@ -62,7 +62,7 @@ python main.py --text SOME SAMPLE DESCRIPTION OR PIECE OF TEXT --out /path/to/wr
 
 Which will write a single word embedding to `/path/to/write/embeddings/to.txt` and write the predictions to `/path/to/write/embeddings/predictions_to.txt`. 
 
-If the user only wants word embeddings, the `--predict` flag can be omitted.
+If the user only wants word embeddings, the `--predict` flag can be omitted. Word embeddings are always generated and written to file whether predictions are made or not.
 
 ### Demo
 
