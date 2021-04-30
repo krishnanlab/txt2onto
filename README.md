@@ -42,11 +42,28 @@ normal adult patient normal adult patient age gender male skeletal muscle homo s
 medium lp stimulation blood lp homo sapiens myeloid monocytic cell medium lp stimulation extract total rna le biotin norm medium lp stimulation ...
 ```
 
-
+The input text will be preprocessed during the execution of `src/main.py`. For more information on the preprocessing pipeline, see the `preprocess` function in `src/utils.py`.
 
 ### Output
 
-DESCRIBE
+The prediction task can then be performed by running:
+
+```
+python main.py --file /path/to/text/file.txt --out /path/to/write/embeddings/to.txt --predict
+```
+
+This will read in the input text from `path/to/text/file.txt`, create a word embedding for each line of text and write it to `/path/to/write/embeddings/to.txt`, and then make a prediction for each line of text for each of our models and write it to `/path/to/write/embeddings/predictions_to.txt`. The output path for predicted probabilities is automatically generated when the flag is passed. The $i,j$ entry of the output dataframe is the predicted probability assigned by model $i$ for text snippet $j$ from the input file. 
+
+Alternatively, a single text snippet can be read from the command line:
+
+```
+python main.py --text SOME SAMPLE DESCRIPTION OR PIECE OF TEXT --out /path/to/write/embeddings/to.txt --predict
+```
+
+Which will write a single word embedding to `/path/to/write/embeddings/to.txt` and write the predictions to `/path/to/write/embeddings/predictions_to.txt`. 
+
+If the user only wants word embeddings, the `--predict` flag can be omitted.
+
 ### Demo
 
 For an example, run `sh demo.sh` in the `src/` directory.
@@ -56,11 +73,32 @@ cd src/
 sh demo.sh
 ```
 
+This will read in the example input file from `data/example_input.txt`, write embeddings to `out/example_output.txt`, and write predictions to `out/predictions_example_output.txt`.
+
 ## Overview of Repository
 
 Here, we list the files we have included as part of this repository.
 
-* `bin/` - 
+* `bin/` - The fully trained Logistic Regression models stored as pickle (`.p`) files
+* `data/` - Example input file and files needed for making embeddings and output predictions
+    * `data/UBERONCL.txt` - A text file that maps the model ontology identifiers to plain text
+    * `data/pubmed_weights.txt.gz` - IDF weights for every unique word across PubMed used to make a weighted average embedding for each piece of text
+* `gold_standard/` - Raw datafiles from our manuscript
+    * `gold_standard/AnatomicalSystemsPerModel.json` - Mapping of every term in UBERON to a high-level anatomical system
+    * `gold_standard/CrossValidatedModels.txt` - A list of models we had sufficient positively labeled training data to perform cross validation on
+    * `gold_standard/GoldStandardLabelMatrix_PlainText.csv` - Our manually annotated gold standard in plain text
+    * `gold_standard/GoldStandardLabelMatrix.csv` - Our manually annotated gold standard with ontology identifiers
+    * `gold_standard/GoldStandard_Propagated.txt` - Our manually annotated gold standard with a list of annotations for each sample not in matrix form
+    * `gold_standard/GoldStandard_Sample-Descriptions.txt` - Sample descriptions for the samples in our gold standard
+    * `gold_standard/GoldStandard_Sample-IDS.txt` - Sample and experiment labels corresponding to `gold_standard/GoldStandard_Sample-Descriptions.txt`
+    * `gold_standard/GoldStandard_Unpropagated.txt` - The original gold standard manual annotations
+    * `gold_standard/ManuscriptModels.txt` - A list of the models we evaluated and showed results for in our manuscript
+    * `gold_standard/ModelsPerAnatomicalSystem.json` - Mapping that lists the tissues and cell types that belong to each high-level anatomical system
+* `src/` - Main source directory
+    * `src/demo.sh` - Runs an example of the pipeline
+    * `src/main.py` - Primary file for making predictions on input text
+    * `src/utils.py` - Utility file containing tools for making predictions on input text
+* `out/` - Example directory to send outputs to
 
 ## Additional Information
 
