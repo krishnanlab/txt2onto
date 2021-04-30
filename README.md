@@ -42,14 +42,14 @@ normal adult patient normal adult patient age gender male skeletal muscle homo s
 medium lp stimulation blood lp homo sapiens myeloid monocytic cell medium lp stimulation extract total rna le biotin norm medium lp stimulation ...
 ```
 
-The input text will be preprocessed during the execution of `src/main.py`. For more information on the preprocessing pipeline, see the `preprocess` function in `src/utils.py`.
+The input text will be preprocessed during the execution of `src/txt2onto.py`. For more information on the preprocessing pipeline, see the `preprocess` function in `src/utils.py`.
 
 ### Output
 
 The prediction task can then be performed by running:
 
 ```
-python main.py --file /path/to/text/file.txt --out /path/to/write/embeddings/to.txt --predict
+python txt2onto.py --file /path/to/text/file.txt --out /path/to/write/embeddings/to.txt --predict
 ```
 
 This will read in the input text from `path/to/text/file.txt`, create a word embedding for each line of text and write it to `/path/to/write/embeddings/to.txt`, and then make a prediction for each line of text for each of our models and write it to `/path/to/write/embeddings/predictions_to.txt`. The output path for predicted probabilities is automatically generated when the flag is passed. The i,j entry of the output dataframe is the predicted probability assigned by model i for text snippet j from the input file. 
@@ -57,7 +57,7 @@ This will read in the input text from `path/to/text/file.txt`, create a word emb
 Alternatively, a single text snippet can be read from the command line:
 
 ```
-python main.py --text SOME SAMPLE DESCRIPTION OR PIECE OF TEXT --out /path/to/write/embeddings/to.txt --predict
+python txt2onto.py --text SOME SAMPLE DESCRIPTION OR PIECE OF TEXT --out /path/to/write/embeddings/to.txt --predict
 ```
 
 Which will write a single word embedding to `/path/to/write/embeddings/to.txt` and write the predictions to `/path/to/write/embeddings/predictions_to.txt`. 
@@ -96,7 +96,7 @@ Here, we list the files we have included as part of this repository.
     * `gold_standard/ModelsPerAnatomicalSystem.json` - Mapping that lists the tissues and cell types that belong to each high-level anatomical system
 * `src/` - Main source directory
     * `src/demo.sh` - Runs an example of the pipeline
-    * `src/main.py` - Primary file for making predictions on input text
+    * `src/txt2onto.py` - Primary file for making predictions on input text
     * `src/utils.py` - Utility file containing tools for making predictions on input text
 * `out/` - Example directory to send outputs to
 

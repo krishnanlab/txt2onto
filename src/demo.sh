@@ -3,4 +3,4 @@ if [ ! -d ../out/ ]; then
     mkdir ../out/
 fi
 
-python main.py --file ../data/example_input.txt --out ../out/example_output.txt --predict
+python txt2onto.py --file ../data/example_input.txt --out ../out/example_output.txt --predict
