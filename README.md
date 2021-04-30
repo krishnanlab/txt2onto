@@ -16,7 +16,7 @@ A link to our paper can be found [HERE]().
 
 ## Installation
 
-Requirements can be installed by running `pip install -r requirements.txt`. These requirements have been verified for python verison 3.7.7.
+Requirements can be installed by running `pip install -r requirements.txt`. These requirements have been verified for python version 3.7.7.
 
 If you are using a newer version of python or scikit-learn than listed in `requirements.txt`, you may see a warning message like the following: 
 
@@ -52,7 +52,7 @@ The prediction task can then be performed by running:
 python main.py --file /path/to/text/file.txt --out /path/to/write/embeddings/to.txt --predict
 ```
 
-This will read in the input text from `path/to/text/file.txt`, create a word embedding for each line of text and write it to `/path/to/write/embeddings/to.txt`, and then make a prediction for each line of text for each of our models and write it to `/path/to/write/embeddings/predictions_to.txt`. The output path for predicted probabilities is automatically generated when the flag is passed. The $i,j$ entry of the output dataframe is the predicted probability assigned by model $i$ for text snippet $j$ from the input file. 
+This will read in the input text from `path/to/text/file.txt`, create a word embedding for each line of text and write it to `/path/to/write/embeddings/to.txt`, and then make a prediction for each line of text for each of our models and write it to `/path/to/write/embeddings/predictions_to.txt`. The output path for predicted probabilities is automatically generated when the flag is passed. The i,j entry of the output dataframe is the predicted probability assigned by model i for text snippet j from the input file. 
 
 Alternatively, a single text snippet can be read from the command line:
 
@@ -92,7 +92,7 @@ Here, we list the files we have included as part of this repository.
     * `gold_standard/GoldStandard_Sample-Descriptions.txt` - Sample descriptions for the samples in our gold standard
     * `gold_standard/GoldStandard_Sample-IDS.txt` - Sample and experiment labels corresponding to `gold_standard/GoldStandard_Sample-Descriptions.txt`
     * `gold_standard/GoldStandard_Unpropagated.txt` - The original gold standard manual annotations
-    * `gold_standard/ManuscriptModels.txt` - A list of the models we evaluated and showed results for in our manuscript
+    * `gold_standard/ManuscriptModels.txt` - A list of the models we evaluated and showed results for in our manuscript, a subset of `gold_standard/CrossValidatedModels.txt`
     * `gold_standard/ModelsPerAnatomicalSystem.json` - Mapping that lists the tissues and cell types that belong to each high-level anatomical system
 * `src/` - Main source directory
     * `src/demo.sh` - Runs an example of the pipeline
