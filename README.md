@@ -18,7 +18,7 @@ A link to our paper can be found [HERE]().
 
 Requirements can be installed by running `pip install -r requirements.txt`. These requirements have been verified for python version 3.7.7.
 
-If you are using a newer version of python or scikit-learn than listed in `requirements.txt`, you may see a warning message like the following: 
+An update in library dependencies requires scikit-learn to be version 0.23.2 as listed in `requirements.txt`. The full models were trained using scikit-learn version 0.23.1. When loading the models, the following warning message will be shown:
 
 ```
 UserWarning: Trying to unpickle estimator LogisticRegression from version 0.23.1 
@@ -26,7 +26,7 @@ when using version <YOUR CURRENT VERSION>. This might lead to breaking code or i
 Use at your own risk. warnings.warn()
 ```
 
-We recommend using the stated versions of the libraries in `requirements.txt` to avoid any potential issues, however, in our testing with newer versions of scikit-learn, we have encountered no problems. 
+In our testing with newer versions of scikit-learn, we have encountered no problems. If a problem does arise, please post a git issue and we will work to resolve it. 
 
 ## Usage
 
@@ -118,7 +118,7 @@ This work was primarily supported by US National Institutes of Health (NIH) gran
 
 ### Acknowledgements
 
-The authors would like to thank [Kayla Johnson](https://sites.google.com/view/kaylajohnson/home) and [Anna Yannakopoulos](https://yannakopoulos.github.io/) for their feedback and contributions to this manuscript as well as their support on this research.
+The authors would like to thank [Kayla Johnson](https://sites.google.com/view/kaylajohnson/home) for their support and feedback on the manuscript, and all members of the Krishnan Lab for valuable discussions and feedback on the project.
 
 <!--
 ### Citation
