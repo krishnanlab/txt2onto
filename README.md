@@ -1,6 +1,6 @@
 # Systematic tissue annotations of –omics samples by modeling unstructured metadata
 
-Nathaniel T. Hawkins, Marc Maldaver, Lindsay A. Guare, Arjun Krishnan
+Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan
 
 There are currently >1.3 million human –omics samples that are publicly available. However, this valuable resource remains acutely underused because discovering samples, say from a particular tissue of interest, from this ever-growing data collection is still a significant challenge. The major impediment is that sample attributes such as tissue/cell type of origin are routinely described using non-standard, varied terminologies written in unstructured natural language. Here, we provide a natural-language-processing-based machine learning approach (NLP-ML) to infer tissue and cell type annotations for –omics samples based only on their free-text metadata. NLP-ML works by creating numerical representations of sample text descriptions and using these representations as features in a supervised learning classifier that predicts tissue/cell-type terms in a structured ontology. Our approach significantly outperforms representative methods of existing state of the art approaches to addressing the sample annotation problem. We have also demonstrated the biological interpretability of tissue NLP-ML models using an analysis of their similarity to each other and an evaluation of their ability to classify tissue- and disease-associated biological processes based on their text descriptions alone. 
 
