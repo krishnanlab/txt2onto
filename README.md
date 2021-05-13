@@ -1,6 +1,10 @@
 # Systematic tissue annotations of –omics samples by modeling unstructured metadata
 
-Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan
+This repo is the home of `txt2onto`, a Python utility for classifying unstructured text to terms in a tissue ontology using NLP-ML – a combination of natural language processing (NLP) and machine learning (ML). Also in this repo are NLP-ML models trained to perform the tissue classification along with demo scripts and extensive documentation. Given an input file where each line is a piece of text to be classified, the `txt2onto` utility will perform the necessary text preprocessing, create an embedding for each piece of text, and then run each embedding through our pre-trained tissue models.
+
+The NLP-ML method is described in this [preprint](https://doi.org/10.1101/2021.05.10.443525) `bioRxiv DOI: 10.1101/2021.05.10.443525`.
+
+## More info
 
 There are currently >1.3 million human –omics samples that are publicly available. However, this valuable resource remains acutely underused because discovering samples, say from a particular tissue of interest, from this ever-growing data collection is still a significant challenge. The major impediment is that sample attributes such as tissue/cell-type of origin are routinely described using non-standard, varied terminologies written in unstructured natural language. Here, we provide a natural-language-processing-based machine learning approach (NLP-ML) to infer tissue and cell-type annotations for –omics samples based only on their free-text metadata. NLP-ML works by creating numerical representations of sample text descriptions and using these representations as features in a supervised learning classifier that predicts tissue/cell-type terms in a structured ontology. Our approach significantly outperforms representative methods of existing state of the art approaches to addressing the sample annotation problem. We have also demonstrated the biological interpretability of tissue NLP-ML models using an analysis of their similarity to each other and an evaluation of their ability to classify tissue- and disease-associated biological processes based on their text descriptions alone. 
 
@@ -11,7 +15,7 @@ Here, we provide the fully trained models and a simple utility script for users 
 <!--
 ### Link to Paper
 
-A link to our paper can be found [HERE]().
+A link to our paper can be found [HERE](https://doi.org/10.1101/2021.05.10.443525).
 -->
 
 ## Installation
@@ -106,7 +110,7 @@ Here, we list the files we have included as part of this repository.
 For support please contact [Nat Hawkins](hawki235@msu.edu).
 
 ### Inquiry
-All general inquiries should be directed to [Dr. Arjun Krishnan](arjun@msu.edu).
+All general inquiries should be directed to [Arjun Krishnan](arjun@msu.edu).
 
 ### License
 This repository and all its contents are released under the [Creative Commons License: Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode); See [LICENSE.md](https://github.com/krishnanlab/txt2onto/blob/main/LICENSE).
