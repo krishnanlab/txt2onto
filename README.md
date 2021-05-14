@@ -4,7 +4,8 @@ This repo is the home of `txt2onto`, a Python utility for classifying unstructur
 
 The NLP-ML method is described in this [preprint](https://doi.org/10.1101/2021.05.10.443525) `bioRxiv DOI: 10.1101/2021.05.10.443525`.
 
-## More info
+
+## More Info
 
 There are currently >1.3 million human –omics samples that are publicly available. However, this valuable resource remains acutely underused because discovering samples, say from a particular tissue of interest, from this ever-growing data collection is still a significant challenge. The major impediment is that sample attributes such as tissue/cell-type of origin are routinely described using non-standard, varied terminologies written in unstructured natural language. Here, we provide a natural-language-processing-based machine learning approach (NLP-ML) to infer tissue and cell-type annotations for –omics samples based only on their free-text metadata. NLP-ML works by creating numerical representations of sample text descriptions and using these representations as features in a supervised learning classifier that predicts tissue/cell-type terms in a structured ontology. Our approach significantly outperforms representative methods of existing state of the art approaches to addressing the sample annotation problem. We have also demonstrated the biological interpretability of tissue NLP-ML models using an analysis of their similarity to each other and an evaluation of their ability to classify tissue- and disease-associated biological processes based on their text descriptions alone. 
 
@@ -12,11 +13,6 @@ Previous studies have shown that the molecular profiles associated with –omics
 
 Here, we provide the fully trained models and a simple utility script for users to leverage the predictive power of NLP-ML to annotate their text corpora of interest for 346 tissues and cell-types from [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon).  These NLP-ML models are trained using our full gold standard. As a note: in our manuscript, we discussed the results of models who had sufficient training data in the gold standard for at least 3-fold CV. The remaining models were not discussed or examined in detail in our work due to lack of sufficient labeled samples. We have included trained models for all available tissues and cell-types so as to provide users with the maximum amount of predictive capability. However, it should be noted that some models included in this repository have very little training data (i.e., small number of positively labeled examples) and thus may provide inaccurate annotations. The full list of cross-validated models can be found [here](https://github.com/krishnanlab/txt2onto/blob/main/gold_standard/CrossValidatedModels.txt), and the full list of models presented in our paper can be found [here](https://github.com/krishnanlab/txt2onto/blob/main/gold_standard/ManuscriptModels.txt).
 
-<!--
-### Link to Paper
-
-A link to our paper can be found [HERE](https://doi.org/10.1101/2021.05.10.443525).
--->
 
 ## Installation
 
@@ -31,6 +27,7 @@ Use at your own risk. warnings.warn()
 ```
 
 In our testing with newer versions of scikit-learn, we have encountered no problems. If a problem does arise, please post a git issue and we will work to resolve it. 
+
 
 ## Usage
 
@@ -104,30 +101,29 @@ Here, we list the files we have included as part of this repository.
     * `src/utils.py` - Utility file containing tools for making predictions on input text
 * `out/` - Example directory to send outputs to
 
+
 ## Additional Information
 
 ### Support
-For support please contact [Nat Hawkins](hawki235@msu.edu).
+For support, please contact [Nat Hawkins](http://www.nathawkins.info/) at hawki235@msu.edu.
 
 ### Inquiry
-All general inquiries should be directed to [Arjun Krishnan](arjun@msu.edu).
+All general inquiries should be directed to [Arjun Krishnan](www.thekrishnanlab.org) at arjun@msu.edu.
 
 ### License
 This repository and all its contents are released under the [Creative Commons License: Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode); See [LICENSE.md](https://github.com/krishnanlab/txt2onto/blob/main/LICENSE).
 
+### Citation
+If you use this work, please cite:  
+**Systematic tissue annotations of –omics samples by modeling unstructured metadata**  
+Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan  
+_bioRxiv_ 2021.05.10.443525; doi: https://doi.org/10.1101/2021.05.10.443525
 
 ### Funding
-
 This work was primarily supported by US National Institutes of Health (NIH) grants R35 GM128765 to AK and in part by MSU start-up funds to AK and MSU Rasmussen Doctoral Recruitment Award and Engineering Distinguished Fellowship to NTH.
 
 ### Acknowledgements
+The authors would like to thank [Kayla Johnson](https://sites.google.com/view/kaylajohnson/home) for their support and feedback on the manuscript, and all members of the [Krishnan Lab](www.thekrishnanlab.org) for valuable discussions and feedback on the project.
 
-The authors would like to thank [Kayla Johnson](https://sites.google.com/view/kaylajohnson/home) for their support and feedback on the manuscript, and all members of the Krishnan Lab for valuable discussions and feedback on the project.
-
-<!--
-### Citation
-
--->
 ### References
-
-[1] : **Ontology-aware classification of tissue and cell-type signals in gene expression profiles across platforms and technologies**. Lee Y, Krishnan A, Zhu Q, Troyanskaya OG. Bioinformatics (2013) 29:3036-3044.
+[1] **Ontology-aware classification of tissue and cell-type signals in gene expression profiles across platforms and technologies**. Lee Y, Krishnan A, Zhu Q, Troyanskaya OG. Bioinformatics (2013) 29:3036-3044.
