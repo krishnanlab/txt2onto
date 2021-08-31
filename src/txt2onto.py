@@ -1,14 +1,15 @@
 # Systematic tissue annotations of genomic samples by modeling unstructured metadata
 #
-# Nathaniel T. Hawkins, Marc Maldaver, Lindsay A. Guare, Arjun Krishnan
+# Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan
 # Corresponding Author: Nathaniel T. Hawkins, hawki235@msu.edu
 #
-# main.py - script to run new text through our models to get word embeddings
+# txt2onto.py - script to run new text through our models to get word embeddings
 # weighted by PubMed IDF weights and predicted probabilities for all
 # trained models.
 # 
 # Author: Nathaniel T. Hawkins
 # Date: 14 August, 2020
+# Updated: 31 August, 2021
 
 ## Imports
 from utils import loadDictionary, makeStackedEmbedding, createEmbeddingFromText, loadAllModels

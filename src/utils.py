@@ -1,6 +1,6 @@
 # Systematic tissue annotations of genomic samples by modeling unstructured metadata
 #
-# Nathaniel T. Hawkins, Marc Maldaver, Lindsay A. Guare, Arjun Krishnan
+# Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan
 # Corresponding Author: Nathaniel T. Hawkins, hawki235@msu.edu
 #
 # utils.py - script containing functions utilized in main.py
@@ -8,6 +8,7 @@
 # Author: Nathaniel T. Hawkins
 # With significant contributions by: Anna Yannakopoulos
 # Date: 14 August, 2020
+# Updated: 31 August, 2021
 
 ## Imports 
 import pickle
@@ -22,15 +23,12 @@ from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from flair.data import Sentence
 from flair.embeddings import StackedEmbeddings, BertEmbeddings, ELMoEmbeddings
-
 import nltk, torch, flair
 
+## Dowload necessary NLTK models and lists of words
 nltk.download('stopwords')
 nltk.download('wordnet')
 flair.device =  torch.device("cpu")
-
-
-
 
 def loadDictionary(fname, compression = True, try_except = True, key_dtype = str,
                    value_dtype = float, delimiter = "\t", verbose = False):
@@ -249,6 +247,10 @@ def createEmbeddingFromText(input_text, embedding_model, weight_dictionary):
 
     ## Get weights for all available words in weight_dictionary
     processed_word_weights = {w:weight_dictionary[w] for w in processed_input_words if w in weight_dictionary.keys()}
+
+    ## If no weights exist for all words in the input text, use a strict averaging
+    if processed_word_weights == {}:
+        processed_word_weights = {w:1 for w in processed_input_words}
 
     ## In the event that a word does not have a weight, the mean weight across all words that
     ## have weights will be used. If no words have weights, then the mean weight across all 
