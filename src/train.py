@@ -19,10 +19,10 @@ from argparse import ArgumentParser
 if __name__ == "__main__":
     ## Command line inputs
     parser = ArgumentParser()
-    parser.add_argument("-input", 
+    parser.add_argument("--input", 
                         help = "Three column, tab separated input file containing text and labels to train NLP-ML model",
                         required = True)
-    parser.add_argument("-out", 
+    parser.add_argument("--out", 
                         help = "Path to directory where trained model will be saved to",
                         required = True)
     args = parser.parse_args()

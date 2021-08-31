@@ -18,10 +18,10 @@ from argparse import ArgumentParser
 if __name__ == "__main__":
     ## Command line arguments
     parser = ArgumentParser()
-    parser.add_argument("-ont", 
+    parser.add_argument("--ont", 
                         help = "Ontology term to build a model for", 
                         required = True)
-    parser.add_argument("-out",
+    parser.add_argument("--out",
                         help = "Directory to save trained model to if -save passed")
     args = parser.parse_args()
 

@@ -3,7 +3,7 @@
 # Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan
 # Corresponding Author: Nathaniel T. Hawkins, hawki235@msu.edu
 #
-# demo.sh - 
+# demo.sh - demo for running txt2onto on a given set of input text to make predictions using our models
 # 
 # Author: Nathaniel T. Hawkins
 # Date: 14 August, 2020

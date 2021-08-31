@@ -292,7 +292,7 @@ def loadAllModels(bin_dir = "../bin/", ontid_mapping = "../data/UBERONCL.txt"):
 
     ## Load each model
     models_ = {}
-    for fname in [os.path.join(bin_dir, f) for f in os.listdir(bin_dir)]:
-        model_name = fname.split("/")[-1].split("_")[0].replace("-",":")
+    for fname in [os.path.join(bin_dir, f) for f in os.listdir(bin_dir) if not f.startswith(".")]:
+        model_name = re.findall("[A-Z]+[-_:]+[0-9]+", fname)[0].replace("-",":")
         models_[ontid_to_text[model_name]] = loadModelFromPickle(fname)
     return models_

@@ -28,6 +28,7 @@ if __name__ == "__main__":
     parser.add_argument("--file", metavar = "/path/to/file/in_file.txt", type = str, help = "Path to file containing text to create embeddings for. One embedding will be made for each line in input file.")
     parser.add_argument("--out", metavar = "/path/to/file/out_file.txt", type = str, help = "Path to write embeddings to file.", required = True)
     parser.add_argument("--predict", help = "Flag that denotes to predict probabilities for all available models.", action = "store_true")
+    parser.add_argument("--models", help = "Path to directory containing model(s) to load for making predictions. Default = `../bin/`, our trained NLP-ML models.", default = "../bin/")
     parser.add_argument("--precision", metavar = "N", default = 5, type = int, help = "Number of decimals to keep when writing to file. This applies to word embeddings and predicted probabilities.")
     args = parser.parse_args()
 
@@ -53,7 +54,7 @@ if __name__ == "__main__":
     ## If --predict is passed, then load all models as a dictionary
     if args.predict:
         print("Loading models to make predictions...")
-        models_dict = loadAllModels()
+        models_dict = loadAllModels(bin_dir = args.models)
         models = models_dict.keys()
         print(f"Successfully loaded {len(models)}!")
 
