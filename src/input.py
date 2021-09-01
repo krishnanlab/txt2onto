@@ -22,7 +22,7 @@ if __name__ == "__main__":
                         help = "Ontology term to build a model for", 
                         required = True)
     parser.add_argument("--out",
-                        help = "Directory to save trained model to if -save passed")
+                        help = "Directory to save trained model to")
     args = parser.parse_args()
 
 

@@ -1,15 +1,15 @@
-# Systematic tissue annotations of –omics samples by modeling unstructured metadata
+# Systematic tissue annotations of genomic samples by modeling unstructured metadata
 
-This repo is the home of `txt2onto`, a Python utility for classifying unstructured text to terms in a tissue ontology using NLP-ML – a combination of natural language processing (NLP) and machine learning (ML). Also in this repo are NLP-ML models trained to perform the tissue classification along with demo scripts and extensive documentation. Given an input file where each line is a piece of text to be classified, the `txt2onto` utility will perform the necessary text preprocessing, create an embedding for each piece of text, and then run each embedding through our pre-trained tissue models.
+This repo is the home of `txt2onto`, a Python utility for classifying unstructured text to terms in a tissue ontology using NLP-ML – a combination of natural language processing (NLP) and machine learning (ML). Also in this repo are our fully trained NLP-ML models to perform the tissue classification on unstructured text. We have included sample inputs and outline the use of NLP-ML with a demo script.
 
 The NLP-ML method is described in this [preprint](https://doi.org/10.1101/2021.05.10.443525) `bioRxiv DOI: 10.1101/2021.05.10.443525`.
 
 
 ## More Info
 
-There are currently >1.3 million human –omics samples that are publicly available. However, this valuable resource remains acutely underused because discovering samples, say from a particular tissue of interest, from this ever-growing data collection is still a significant challenge. The major impediment is that sample attributes such as tissue/cell-type of origin are routinely described using non-standard, varied terminologies written in unstructured natural language. Here, we provide a natural-language-processing-based machine learning approach (NLP-ML) to infer tissue and cell-type annotations for –omics samples based only on their free-text metadata. NLP-ML works by creating numerical representations of sample text descriptions and using these representations as features in a supervised learning classifier that predicts tissue/cell-type terms in a structured ontology. Our approach significantly outperforms representative methods of existing state of the art approaches to addressing the sample annotation problem. We have also demonstrated the biological interpretability of tissue NLP-ML models using an analysis of their similarity to each other and an evaluation of their ability to classify tissue- and disease-associated biological processes based on their text descriptions alone. 
+There are currently >1.3 million human –omics samples that are publicly available. However, this valuable resource remains acutely underused because discovering samples, say from a particular tissue of interest, from this ever-growing data collection is still a significant challenge. The major impediment is that sample attributes such as tissue/cell-type of origin are routinely described using non-standard, varied terminologies written in unstructured natural language. Here, we provide a natural-language-processing-based machine learning approach (NLP-ML) to infer tissue and cell-type annotations for genomic samples based only on their free-text metadata. NLP-ML works by creating numerical representations of sample text descriptions and using these representations as features in a supervised learning classifier that predicts tissue/cell-type terms in a structured ontology. Our approach significantly outperforms representative methods of existing state of the art approaches to addressing the sample annotation problem. We have also demonstrated the biological interpretability of tissue NLP-ML models using an analysis of their similarity to each other and an evaluation of their ability to classify tissue- and disease-associated biological processes based on their text descriptions alone. 
 
-Previous studies have shown that the molecular profiles associated with –omics samples are highly predictive of a variety of sample attributes. Using transcriptome data, we have shown that NLP-ML models can be nearly as accurate as expression-based models in predicting sample tissue annotations. However, the latter (models based on –omics profiles) need to be trained anew for each –omics experiment type. On the other hand, once trained using any text-based gold-standard, approaches such as NLP-ML can be used to classify sample descriptions irrespective of sample type. We demonstrated this versatility by using NLP-ML models trained on microarray sample descriptions to classify RNA-seq, ChIP-seq, and methylation samples without retraining.
+Previous studies have shown that the molecular profiles associated with genomic samples are highly predictive of a variety of sample attributes. Using transcriptome data, we have shown that NLP-ML models can be nearly as accurate as expression-based models in predicting sample tissue annotations. However, the latter (models based on genomic profiles) need to be trained anew for each genomic experiment type. On the other hand, once trained using any text-based gold-standard, approaches such as NLP-ML can be used to classify sample descriptions irrespective of sample type. We demonstrated this versatility by using NLP-ML models trained on microarray sample descriptions to classify RNA-seq, ChIP-seq, and methylation samples without retraining.
 
 Here, we provide the fully trained models and a simple utility script for users to leverage the predictive power of NLP-ML to annotate their text corpora of interest for 346 tissues and cell-types from [UBERON](https://www.ebi.ac.uk/ols/ontologies/uberon).  These NLP-ML models are trained using our full gold standard. As a note: in our manuscript, we discussed the results of models who had sufficient training data in the gold standard for at least 3-fold CV. The remaining models were not discussed or examined in detail in our work due to lack of sufficient labeled samples. We have included trained models for all available tissues and cell-types so as to provide users with the maximum amount of predictive capability. However, it should be noted that some models included in this repository have very little training data (i.e., small number of positively labeled examples) and thus may provide inaccurate annotations. The full list of cross-validated models can be found [here](https://github.com/krishnanlab/txt2onto/blob/main/gold_standard/CrossValidatedModels.txt), and the full list of models presented in our paper can be found [here](https://github.com/krishnanlab/txt2onto/blob/main/gold_standard/ManuscriptModels.txt).
 
@@ -31,7 +31,9 @@ In our testing with newer versions of scikit-learn, we have encountered no probl
 
 ## Usage
 
-### Input
+### Making predictions on unstructured text using NLP-ML
+
+#### Input
 
 The input should be a plain text file with one description per line. An example is provided [here](https://github.com/krishnanlab/txt2onto/blob/main/data/example_input.txt) with a small excerpt below.
 
@@ -45,15 +47,15 @@ medium lp stimulation blood lp homo sapiens myeloid monocytic cell medium lp sti
 
 The input text will be preprocessed during the execution of `src/txt2onto.py`. For more information on the preprocessing pipeline, see the `preprocess` function in `src/utils.py`.
 
-### Output
+#### Output
 
-The prediction task can then be performed by running:
+The prediction task can then be performed by running the following:
 
 ```
 python txt2onto.py --file /path/to/text/file.txt --out /path/to/write/embeddings/to.txt --predict
 ```
 
-This will read in the input text from `path/to/text/file.txt`, create a word embedding for each line of text and write it to `/path/to/write/embeddings/to.txt`, and then make a prediction for each line of text for each of our models and write it to `/path/to/write/embeddings/predictions_to.txt`. The output path for predicted probabilities is automatically generated when the flag is passed. The i,j entry of the output dataframe is the predicted probability assigned by model i for text snippet j from the input file. 
+This will read in the input text from `path/to/text/file.txt`, create a word embedding for each line of text and write it to `/path/to/write/embeddings/to.txt`, and then make a prediction for each line of text for each of our models and write it to `/path/to/write/embeddings/predictions_to.txt`. The output path for predicted probabilities is automatically generated when the flag is passed. The i,j entry of the output dataframe is the predicted probability assigned by model i for text snippet j from the input file. If you only want embeddings for your input text, omit the `--predict` flag.
 
 Alternatively, a single text snippet can be read from the command line:
 
@@ -65,9 +67,9 @@ Which will write a single word embedding to `/path/to/write/embeddings/to.txt` a
 
 If the user only wants word embeddings, the `--predict` flag can be omitted. Word embeddings are always generated and written to file whether predictions are made or not.
 
-### Demo
+#### Demo
 
-For an example, run `sh demo.sh` in the `src/` directory.
+For an example, run `sh demo.sh` in the `src/` directory. The script will execute the full predictive pipeline of NLP-ML. Each line of input text will be turned into a numerical representation by taking a weighted average of the individual word embeddings from the text, and run each embedding through each of our trained NLP-ML models. 
 
 ```bash
 cd src/
@@ -75,6 +77,42 @@ sh demo.sh
 ```
 
 This will read in the example input file from `data/example_input.txt`, write embeddings to `out/example_output.txt`, and write predictions to `out/predictions_example_output.txt`.
+
+### Training new NLP-ML models
+
+Given labeled text snippets, new NLP-ML models can be trained for additional tissues, cell types, or potentially other binary classification problems. 
+
+In order to train a new model, an input file of the following is required:
+
+```
+ID1  1  TEXT
+ID2 -1  TEXT
+ID3 -1  TEXT
+ID4  1  TEXT    
+```
+
+The input file is a three column, tab-separated file. Column 1 is the ID corresponding to the sample, input text, etc. Column 2 is the true label, either +1 or -1. The final column is the text associated with the sample. An example training input can be found at `../training_inputs/UBERON-0002113_NLP-ML-input_SUBSET.txt`, which is a subset of our gold standard for UBERON:0002113, kidney. A full training input for any tissue or cell type in our gold standard can be created by running the following from the `src/` directory:
+
+```
+python input.py --ont UBERON:0002113 --out ../training_inputs/
+```
+
+
+When trying to make a training input from our gold standard, if an ontology term is specified that we do not have true labels for, a `ValueError` will be raised. Once an input of the specified format is created, a model can be trained from the given input using the following:
+
+```
+python train.py --input ../training_input/labeled_input.txt --out ../user_trained_models/
+```
+
+This will train a model from the embeddings created from the text in the input file, and save the model as a pickled object to the specified output directory. The output filename is automatically generated from the training input. For example, an input of `../training_inputs/UBERON-0002113_NLP-ML-input_SUBSET.txt` used to train a model with a specified output of `../user_trained_models/` will be saved as  `../user_trained_models/MODEL_UBERON-0002113_NLP-ML-input_SUBSET.p`.
+
+To use newly trained models to make predictions as opposed to our trained NLP-ML models, a new model directory can be specified when running `txt2onto.py`. For example, user trained models in the `../user_trained_models/` directory can be used instead of the `../bin/` directory by specifying with the `--models` flag in `txt2onto`:
+
+```
+python txt2onto.py --file /path/to/text/file.txt --out /path/to/write/embeddings/to.txt --predict --models ../user_trained_models/
+```
+
+This will allow you to make predicitions on new unstructured text using your own trained models.
 
 ## Overview of Repository
 
@@ -115,7 +153,7 @@ This repository and all its contents are released under the [Creative Commons Li
 
 ### Citation
 If you use this work, please cite:  
-**Systematic tissue annotations of –omics samples by modeling unstructured metadata**  
+**Systematic tissue annotations of genomic samples by modeling unstructured metadata**  
 Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan  
 _bioRxiv_ 2021.05.10.443525; doi: https://doi.org/10.1101/2021.05.10.443525
 
