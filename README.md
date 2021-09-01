@@ -138,6 +138,9 @@ Here, we list the files we have included as part of this repository.
     * `src/txt2onto.py` - Primary file for making predictions on input text
     * `src/utils.py` - Utility file containing tools for making predictions on input text
 * `out/` - Example directory to send outputs to
+* `paper_results/` - Files with raw values used to create figures from our publication
+* `training_inputs/` - Directory containing example input file for training new NLP-ML models
+* `user_trained_models/` - Directory where user trained models can be stored using included demo
 
 
 ## Additional Information
