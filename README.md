@@ -31,7 +31,7 @@ In our testing with newer versions of scikit-learn, we have encountered no probl
 
 ## Usage
 
-### Making predictions on unstructured text using NLP-ML
+### Use Case 1: Making predictions on unstructured text using NLP-ML
 
 #### Input
 
@@ -78,7 +78,7 @@ sh demo.sh
 
 This will read in the example input file from `data/example_input.txt`, write embeddings to `out/example_output.txt`, and write predictions to `out/predictions_example_output.txt`.
 
-### Training new NLP-ML models
+### Use Case 2: Training new NLP-ML models
 
 Given labeled text snippets, new NLP-ML models can be trained for additional tissues, cell types, or potentially other binary classification problems. 
 
