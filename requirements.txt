@@ -13,4 +13,4 @@ scipy==1.5.2
 spacy==2.1.9
 torch==1.6.0
 transformers==4.3.3
-
+overrides==3.1.0 
