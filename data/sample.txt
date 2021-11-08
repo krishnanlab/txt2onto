@@ -1,0 +1,10 @@
+gse16395,gsm411823,homo,sapiens,normal,tonsil,positive,extract,totalrna,le,biotin,unknown,normal,tonsil,positive
+gse16395,gsm411822,homo,sapiens,normal,tonsil,positive,extract,totalrna,le,biotin,unknown,normal,tonsil,positive
+gse16395,gsm411663,homo,sapiens,normal,tonsil,positive,extract,totalrna,le,biotin,unknown,normal,tonsil,positive
+gse16395,gsm411821,homo,sapiens,normal,tonsil,positive,extract,totalrna,le,biotin,unknown,normal,tonsil,positive
+gse17772,gsm443832,homo,sapiens,department,urology,university,muenster,muenster,germany,dr,sabine,kliesch,testis,biopsy,sample,obtained,patient,patient,bioconductor,software,package,gentleman,carey,bates,et,al,bioconductor,open,software,development,computational,biology,bioinformatics,genome,biol,human,testis,biopsy,sample,extract,totalrna,le,biotin,unknown
+gse17772,gsm443834,homo,sapiens,department,urology,university,muenster,muenster,germany,dr,sabine,kliesch,testis,biopsy,sample,obtained,patient,patient,bioconductor,software,package,gentleman,carey,bates,et,al,bioconductor,open,software,development,computational,biology,bioinformatics,genome,biol,human,testis,biopsy,sample,extract,totalrna,le,biotin,unknown
+gse17772,gsm443833,homo,sapiens,department,urology,university,muenster,muenster,germany,dr,sabine,kliesch,testis,biopsy,sample,obtained,patient,patient,bioconductor,software,package,gentleman,carey,bates,et,al,bioconductor,open,software,development,computational,biology,bioinformatics,genome,biol,human,testis,biopsy,sample,extract,totalrna,le,biotin,unknown
+gse5809,gsm136128,female,homo,sapiens,endometrium,sample,extract,totalrna,lebiotin,biotin,syntheticrna,endometrium,control,hour,hour,control,endometrium,control,hour
+gse5809,gsm136127,female,homo,sapiens,endometrium,sample,extract,totalrna,lebiotin,biotin,syntheticrna,endometrium,control,hour,hour,control,endometrium,control,hour
+gse5809,gsm136126,female,homo,sapiens,endometrium,sample,extract,totalrna,lebiotin,biotin,syntheticrna,endometrium,control,hour,hour,control,endometrium,control,hour

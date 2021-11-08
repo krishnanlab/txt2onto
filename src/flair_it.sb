@@ -1,0 +1,16 @@
+#!/bin/bash --login
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --mem=32GB
+#SBATCH --time=24:00:00
+#SBATCH --account=wang-krishnan
+#SBATCH --output=../flair_%a.out
+#SBATCH --job-name=RFLAIRDR
+#SBATCH --exclude=qml-[000-005]
+#SBATCH --array=0-9
+
+cd ${SLURM_SUBMIT_DIR}
+
+conda activate pyflair
+
+python -u txt2onto.py --file ../data/ProcessedTextDescriptions.txt --out ../../embs.txt --precision 5 -i ${SLURM_ARRAY_TASK_ID} -N ${SLURM_ARRAY_TASK_COUNT}
