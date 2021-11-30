@@ -28,6 +28,15 @@ Use at your own risk. warnings.warn()
 
 In our testing with newer versions of scikit-learn, we have encountered no problems. If a problem does arise, please post a git issue and we will work to resolve it. 
 
+## Docker installation
+
+Since getting the correct versions and dependencies can sometimes be challenging, we make a `Dockerfile` available for building locally or for extending as needed.
+
+```
+docker build .
+```
+
+The resulting docker image will contain the checked out version of the repo. After `docker run ...`, continue through the Usage sections as below.
 
 ## Usage
 
