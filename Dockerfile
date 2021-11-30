@@ -7,5 +7,5 @@ WORKDIR /txt2onto
 COPY . .
 RUN pip install -r requirements.txt
 
-
+CMD ["/bin/sh","-c","bash"]
 
